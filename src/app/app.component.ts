@@ -1,10 +1,22 @@
-import { Component } from '@angular/core';
+import { Component, inject, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })
-export class AppComponent {
-  title = 'hora-certa';
+export class AppComponent implements OnInit {
+
+  private readonly _router = inject(Router)
+  public loading: boolean = true
+
+  ngOnInit(): void {
+
+    setTimeout(() => {
+      this._router.navigate(['/layout'])
+      this.loading = false
+    }, 2000);
+
+  }
 }
