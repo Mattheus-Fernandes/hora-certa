@@ -1,0 +1,9 @@
+<div>
+    <p class="text-blue-950 font-semibold tracking-wide mb-3">Menu de navegação</p>
+
+    <div class="h-ful grid grid-cols-2 gap-4">
+        <div *ngFor="let action of actions" [class.col-span-2]="action.colSpan">
+            <app-quick-action-card [url]="action.url" [icon]="action.iconName" [title]="action.title"></app-quick-action-card>
+        </div>
+    </div>
+</div>

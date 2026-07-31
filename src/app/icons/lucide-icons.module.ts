@@ -3,7 +3,14 @@ import { CommonModule } from '@angular/common';
 import { 
   LucideAngularModule, 
   Webhook,
-  LoaderCircle
+  LoaderCircle,
+  AlarmClockCheck,
+  CalendarPlus,
+  UserPlus,
+  CalendarCheck2,
+  CalendarDays,
+  SquareUser,
+  Settings
 } from 'lucide-angular';
 
 
@@ -14,7 +21,14 @@ import {
     CommonModule,
     LucideAngularModule.pick({
       Webhook,
-      LoaderCircle
+      LoaderCircle,
+      AlarmClockCheck,
+      CalendarPlus,
+      UserPlus,
+      CalendarCheck2,
+      CalendarDays,
+      SquareUser,
+      Settings
     })
   ],
   exports:[

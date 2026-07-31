@@ -14,7 +14,8 @@ import { LucideIconsModule } from '../icons/lucide-icons.module';
     LucideIconsModule
   ],
   exports: [
-    SnippingLoadingComponent
+    SnippingLoadingComponent,
+    LucideIconsModule
   ]
 })
 export class SharedModule { }
