@@ -10,19 +10,19 @@ export class RedirectMenuComponent {
 
   public actions: RedirectCardList = [
     {
-      url: "/appointments",
+      url: "/navegation/appointments",
       title: 'Agendamento',
       iconName: 'calendar-days',
       colSpan: false
     },
     {
-      url: "/customers",
+      url: "/navegation/customers",
       title: 'Cliente',
       iconName: 'square-user',
       colSpan: false
     },
     {
-      url: "/seetings",
+      url: "navegation/settings",
       title: 'Configurar WhatsApp',
       iconName: 'settings',
       colSpan: true
