@@ -10,7 +10,19 @@ import {
   CalendarCheck2,
   CalendarDays,
   SquareUser,
-  Settings
+  Settings,
+  Milestone,
+  ArrowLeft,
+  CalendarPlus2,
+  CalendarCheck,
+  CalendarX2,
+  Calendar1,
+  BookCheck,
+  BellRing,
+  CalendarSync,
+  CalendarCog,
+  CalendarMinus,
+  Dot
 } from 'lucide-angular';
 
 
@@ -28,7 +40,19 @@ import {
       CalendarCheck2,
       CalendarDays,
       SquareUser,
-      Settings
+      Settings,
+      Milestone,
+      ArrowLeft,
+      CalendarPlus2,
+      CalendarCheck,
+      CalendarX2,
+      Calendar1,
+      BookCheck,
+      BellRing,
+      CalendarSync,
+      CalendarCog,
+      CalendarMinus,
+      Dot
     })
   ],
   exports:[

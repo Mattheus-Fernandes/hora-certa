@@ -2,7 +2,9 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
 const routes: Routes = [
-  { path: "layout", loadChildren: () => import("./layout/layout.module").then(m => m.LayoutModule) }
+  { path: "menu", loadChildren: () => import("./layout/layout.module").then(m => m.LayoutModule) },
+  { path: "navegation", loadChildren: () => import("./pages/navegation/navegation.module").then(m=> m.NavegationModule) },
+  
 ]
 
 @NgModule({
