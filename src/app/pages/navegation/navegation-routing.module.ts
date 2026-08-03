@@ -6,7 +6,8 @@ const routes: Routes = [
   {
     path: "", component: NavegationComponent,
     children: [
-      { path: "appointments", loadChildren: () => import("../../pages/appointment/appointment.module").then(m => m.AppointmentModule) }
+      { path: "appointments", loadChildren: () => import("../../pages/appointment/appointment.module").then(m => m.AppointmentModule) },
+      { path: "new-appointment", loadChildren: () => import("../appointment/feature/new-appointment/new-appointment.module").then(m => m.NewAppointmentModule) }
     ]
   }
 ]

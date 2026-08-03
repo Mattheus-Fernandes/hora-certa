@@ -1,0 +1,30 @@
+<div class="h-full p-3 flex flex-col relative md:w-4/5 md:mx-auto lg:w-9/12">
+    <div class="mb-3 md:flex justify-between items-center">
+        <div>
+            <h2 class="text-blue-950 text-xl">Novo agendamento</h2>
+            <p class="text-slate-600 text-sm text-justify">Ao confirmar o agendamento, ele será refletido automaticamente na agenda.</p>
+        </div>
+        <button class="hidden md:block" nz-button nzType="default" routerLink="/navegation/appointments">Voltar</button>
+    </div>
+
+    <button class="w-fit self-end md:hidden" nz-button nzType="default" routerLink="/navegation/appointments">Voltar</button>
+
+    <div class="flex-1 flex justify-center items-center">
+        <div class="p-4 rounded-full border border-slate-400 lg:cursor-pointer" (click)="showModal()">
+            <lucide-icon [size]="32" class="text-slate-400" name="calendar-plus"></lucide-icon>
+        </div>
+    </div>
+
+    <div>
+        <nz-modal
+            [(nzVisible)]="isVisible"
+            [nzOkLoading]="isOkLoading"
+            (nzOnCancel)="handleCancel()"
+            (nzOnOk)="handleOk()"
+            [nzCentered]="true"
+            [nzFooter]="null"
+        >
+            <app-new-appointment-form *nzModalContent [customersList]="customerListRes" (formValue)="handlerSubmitAppoinment($event)"></app-new-appointment-form>
+        </nz-modal>
+    </div>
+</div>
