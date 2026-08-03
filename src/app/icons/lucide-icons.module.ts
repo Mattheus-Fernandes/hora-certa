@@ -22,7 +22,8 @@ import {
   CalendarSync,
   CalendarCog,
   CalendarMinus,
-  Dot
+  Dot,
+  X
 } from 'lucide-angular';
 
 
@@ -52,7 +53,8 @@ import {
       CalendarSync,
       CalendarCog,
       CalendarMinus,
-      Dot
+      Dot,
+      X
     })
   ],
   exports:[
