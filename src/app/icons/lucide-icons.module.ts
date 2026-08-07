@@ -23,7 +23,8 @@ import {
   CalendarCog,
   CalendarMinus,
   Dot,
-  X
+  X,
+  Menu
 } from 'lucide-angular';
 
 
@@ -46,6 +47,7 @@ import {
       ArrowLeft,
       CalendarPlus2,
       CalendarCheck,
+      Menu,
       CalendarX2,
       Calendar1,
       BookCheck,
@@ -54,7 +56,7 @@ import {
       CalendarCog,
       CalendarMinus,
       Dot,
-      X
+      X,
     })
   ],
   exports:[

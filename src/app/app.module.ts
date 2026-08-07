@@ -22,7 +22,7 @@ const ngZorroConfig: NzConfig = {
 
 @NgModule({
   declarations: [
-    AppComponent,
+    AppComponent
   ],
   imports: [
     BrowserModule,

@@ -6,6 +6,8 @@ import { LayoutRoutingModule } from './layout-routing.module';
 import { FastAccessComponent } from './components/fast-access/fast-access.component';
 import { RedirectMenuComponent } from './components/redirect-menu/redirect-menu.component';
 import { QuickActionCardComponent } from './components/quick-action-card/quick-action-card.component';
+import { NgZorroModule } from '../core/ng-zorro/ng-zorro.module';
+import { SidebarComponent } from './components/sidebar/sidebar.component';
 
 
 
@@ -14,12 +16,14 @@ import { QuickActionCardComponent } from './components/quick-action-card/quick-a
     LayoutComponent,
     FastAccessComponent,
     RedirectMenuComponent,
-    QuickActionCardComponent
+    QuickActionCardComponent,
+    SidebarComponent
   ],
   imports: [
     CommonModule,
     SharedModule,
-    LayoutRoutingModule
+    LayoutRoutingModule,
+    NgZorroModule
   ]
 })
 export class LayoutModule { }

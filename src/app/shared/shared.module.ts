@@ -6,6 +6,7 @@ import { HeaderComponent } from './header/header.component';
 import { IdentificationPageComponent } from './identification-page/identification-page.component';
 import { RouterModule } from '@angular/router';
 import { CardNavegationComponent } from './card-navegation/card-navegation.component';
+import { NgZorroModule } from '../core/ng-zorro/ng-zorro.module';
 
 
 
@@ -19,7 +20,8 @@ import { CardNavegationComponent } from './card-navegation/card-navegation.compo
   imports: [
     CommonModule,
     LucideIconsModule,
-    RouterModule
+    RouterModule,
+    NgZorroModule
 ],
   exports: [
     SnippingLoadingComponent,

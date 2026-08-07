@@ -1,0 +1,7 @@
+<div class="absolute bg-blue-50 z-50 h-full w-3/4 top-0 transition-all ease-in-out duration-700 shadow-2xl p-4 md:hidden" [ngClass]="{'-left-full': !toggle, 'left-0': toggle}">
+    <div class="h-full w-full flex flex-col gap-7 text-blue-950 text-base">
+        <ng-container *ngFor="let link of linkSidebarList">
+            <a class="block w-full" (click)="btnLink()" [routerLink]="link.routerLink">{{link.title}}</a>
+        </ng-container>
+    </div>
+</div>

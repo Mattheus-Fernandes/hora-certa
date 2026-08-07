@@ -2,11 +2,12 @@
     <p class="text-blue-950 mb-3">Ações rápidas</p>
 
     <div class="flex gap-4">
-        <ng-container *ngFor="let fastAccess of fastAccessLinks">
-            <div class="bg-blue-950 w-fit p-2 rounded-xl shadow-md">
-                <lucide-icon [name]="fastAccess.iconName" class="text-white" [size]="18"></lucide-icon>
-            </div>
-        </ng-container>
-    </div>
+        <button nz-button nzType="primary">
+      <span nz-icon nzType="search"></span>
+      Search
+    </button>
+
+    </div>   
+
 
 </div>
