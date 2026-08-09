@@ -35,7 +35,8 @@ import {
   Users,
   Phone,
   BookSearch,
-  UserRoundPlus
+  UserRoundPlus,
+  CodeXml
 } from 'lucide-angular';
 
 
@@ -78,7 +79,8 @@ import {
       Users,
       Phone,
       BookSearch,
-      UserRoundPlus
+      UserRoundPlus,
+      CodeXml
     })
   ],
   exports:[
