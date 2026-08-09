@@ -33,7 +33,8 @@ import {
   Trash2,
   Calendar,
   Users,
-  Phone
+  Phone,
+  BookSearch
 } from 'lucide-angular';
 
 
@@ -74,7 +75,8 @@ import {
       Trash2,
       Calendar,
       Users,
-      Phone
+      Phone,
+      BookSearch
     })
   ],
   exports:[
