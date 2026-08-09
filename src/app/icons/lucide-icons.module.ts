@@ -34,7 +34,8 @@ import {
   Calendar,
   Users,
   Phone,
-  BookSearch
+  BookSearch,
+  UserRoundPlus
 } from 'lucide-angular';
 
 
@@ -76,7 +77,8 @@ import {
       Calendar,
       Users,
       Phone,
-      BookSearch
+      BookSearch,
+      UserRoundPlus
     })
   ],
   exports:[
