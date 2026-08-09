@@ -24,7 +24,16 @@ import {
   CalendarMinus,
   Dot,
   X,
-  Menu
+  Menu,
+  ArrowRight,
+  CircleCheck,
+  CircleX,
+  Flag,
+  Pencil,
+  Trash2,
+  Calendar,
+  Users,
+  Phone
 } from 'lucide-angular';
 
 
@@ -57,6 +66,15 @@ import {
       CalendarMinus,
       Dot,
       X,
+      ArrowRight,
+      CircleCheck,
+      CircleX,
+      Flag,
+      Pencil,
+      Trash2,
+      Calendar,
+      Users,
+      Phone
     })
   ],
   exports:[

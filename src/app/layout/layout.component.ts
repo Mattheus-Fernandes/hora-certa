@@ -9,9 +9,9 @@ import { ButtonNavegationList } from '../core/types/button-navegation-list.type'
 export class LayoutComponent {
 
   buttonNavegationList: ButtonNavegationList = [
-    { routerLink: "appointments", title: "Agendamentos", nzType: "primary" },
-    { routerLink: "customers", title: "Clientes", nzType: "primary" },
-    { routerLink: "whatsapp", title: "WhatsApp", nzType: "primary" },
+    { routerLink: "appointments", title: "Agendamentos", iconName: "calendar" },
+    { routerLink: "customers", title: "Clientes", iconName: "users" },
+    { routerLink: "whatsapp", title: "WhatsApp", iconName: "phone" },
   ]
 
   toggleSideBar = false

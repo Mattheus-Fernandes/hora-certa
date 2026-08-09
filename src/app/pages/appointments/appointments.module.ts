@@ -3,6 +3,8 @@ import { CommonModule } from '@angular/common';
 
 import { AppointmentsRoutingModule } from './appointments-routing.module';
 import { AppointmentsComponent } from './appointments.component';
+import { NgZorroModule } from 'src/app/core/ng-zorro/ng-zorro.module';
+import { SharedModule } from "src/app/shared/shared.module";
 
 
 @NgModule({
@@ -11,7 +13,9 @@ import { AppointmentsComponent } from './appointments.component';
   ],
   imports: [
     CommonModule,
-    AppointmentsRoutingModule
-  ]
+    AppointmentsRoutingModule,
+    NgZorroModule,
+    SharedModule
+]
 })
 export class AppointmentsModule { }

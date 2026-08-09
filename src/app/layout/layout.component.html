@@ -1,16 +1,19 @@
 <div class="h-dvh flex flex-col">
    <app-header (toggleSideBar)="getToggleSideBar()" [statusIcon]="changeStatusIcon"></app-header>
 
-   <div class="flex-1 flex flex-col pt-4 p-5 gap-5 relative overflow-hidden">
+   <div class="flex-1 flex flex-col p-5 gap-8 relative overflow-hidden">
       <div class="hidden md:flex md:justify-end gap-5">
          <ng-container *ngFor="let button of buttonNavegationList">
-            <button nz-button [nzType]="button.nzType" nzGhost [routerLink]="button.routerLink">{{button.title}}</button>
+            <button class="py-3 px-5 border rounded-xl flex items-center gap-2 shadow-md transition-all duration-500" [routerLink]="button.routerLink" routerLinkActive="bg-blue-950 text-white">
+               <lucide-icon [name]="button.iconName" [size]="15"></lucide-icon>
+               <p>{{button.title}}</p>
+            </button>
          </ng-container>
       </div>
 
-     <div class="flex-1">
-      <app-sidebar [toggle]="toggleSideBar" (toggleSidebar)="getToggleSideBar($event)"></app-sidebar>   
-      <router-outlet></router-outlet>
+     <div class="flex-1 overflow-auto lg:overflow-visible">
+         <app-sidebar [toggle]="toggleSideBar" (toggleSidebar)="getToggleSideBar($event)"></app-sidebar>   
+         <router-outlet></router-outlet>
      </div>
    </div>
 </div>

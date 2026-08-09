@@ -7,5 +7,5 @@ import { ICardNavegation } from 'src/app/core/interfaces/card-navegation.interfa
   styleUrls: ['./card-navegation.component.scss']
 })
 export class CardNavegationComponent {
-  @Input() cardNavegation!: ICardNavegation
+  @Input() card!: ICardNavegation
 }
