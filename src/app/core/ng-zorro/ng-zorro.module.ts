@@ -9,6 +9,7 @@ import { NzModalModule } from 'ng-zorro-antd/modal';
 import { NzStepsModule } from 'ng-zorro-antd/steps';
 import { NzMessageModule } from 'ng-zorro-antd/message';
 import { NzIconModule } from 'ng-zorro-antd/icon';
+import { NzCardModule } from 'ng-zorro-antd/card';
 
 
 
@@ -26,7 +27,8 @@ import { NzIconModule } from 'ng-zorro-antd/icon';
     NzModalModule,
     NzStepsModule,
     NzMessageModule,
-    NzIconModule
+    NzIconModule,
+    NzCardModule
     
   ],
   exports: [
@@ -38,7 +40,8 @@ import { NzIconModule } from 'ng-zorro-antd/icon';
     NzModalModule,
     NzStepsModule,
     NzMessageModule,
-    NzIconModule
+    NzIconModule,
+    NzCardModule
   ]
 })
 export class NgZorroModule { }

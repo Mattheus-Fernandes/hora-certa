@@ -1,4 +1,16 @@
-<div class="h-full w-full bg-blue-50 text-blue-950 p-3 rounded-xl shadow-md flex flex-col justify-between gap-1 lg:cursor-pointer" [routerLink]="cardNavegation.url">
-    <lucide-icon class="self-end" [name]="cardNavegation.iconName"></lucide-icon>
-    <p>{{cardNavegation.title}}</p>
+<div class="w-full h-full flex flex-col md:flex-row gap-4 border border-gray-100 p-5 rounded-xl shadow-md">
+    <div class="p-4 h-fit w-fit rounded-xl shadow-md" [ngClass]="card.iconStyle">
+        <lucide-icon [name]="card.iconName" [size]="25"></lucide-icon>
+    </div>
+    <div class="w-full flex flex-col justify-between">
+        <div class="mb-5">
+            <h2 class="text-lg font-semibold text-blue-950">{{card.title}}</h2>
+            <p class="text-sm text-blue-950">{{card.description}}</p>
+        </div>
+        <div class="flex justify-end">
+            <div class="p-2 h-fit w-fit rounded-xl shadow-md lg:hover:cursor-pointer" [ngClass]="card.redirectStyle" [routerLink]="card.url">
+                <lucide-icon name="arrow-right" [size]="20"></lucide-icon>
+            </div>
+        </div>
+    </div>
 </div>
