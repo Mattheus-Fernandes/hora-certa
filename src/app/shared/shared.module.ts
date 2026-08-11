@@ -7,6 +7,8 @@ import { IdentificationPageComponent } from './identification-page/identificatio
 import { RouterModule } from '@angular/router';
 import { CardNavegationComponent } from './card-navegation/card-navegation.component';
 import { NgZorroModule } from '../core/ng-zorro/ng-zorro.module';
+import { ButtonComponent } from './button/button.component';
+import { MessageFormComponent } from './message-form/message-form.component';
 
 
 
@@ -15,7 +17,9 @@ import { NgZorroModule } from '../core/ng-zorro/ng-zorro.module';
     SnippingLoadingComponent,
     HeaderComponent,
     IdentificationPageComponent,
-    CardNavegationComponent
+    CardNavegationComponent,
+    ButtonComponent,
+    MessageFormComponent
   ],
   imports: [
     CommonModule,
@@ -28,7 +32,9 @@ import { NgZorroModule } from '../core/ng-zorro/ng-zorro.module';
     LucideIconsModule,
     IdentificationPageComponent,
     HeaderComponent,
-    CardNavegationComponent
+    CardNavegationComponent,
+    ButtonComponent,
+    MessageFormComponent
   ]
 })
 export class SharedModule { }
