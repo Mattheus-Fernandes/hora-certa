@@ -1,0 +1,28 @@
+<div class="w-full p-5 flex flex-col gap-10 shadow-md h-auto bg-gray-50 border lg:h-full overflow-x-hidden">
+    <div class="flex flex-col lg:flex-row lg:items-center gap-4 relative">
+        <div class="p-4 h-fit w-fit shadow-md bg-pink-100 text-pink-800">
+            <lucide-icon name="calendar-plus"></lucide-icon>
+        </div>
+       
+        <div>
+            <h2 class="text-lg text-blue-950 font-semibold">Dados do agendamento</h2>
+            <p class="text-sm text-blue-950">Informe os dados do agendamento</p>
+        </div>
+       
+        <div 
+            class="fixed top-0 left-0 z-50 w-full flex justify-center -translate-y-full shadow-md transition-transform ease-in-out duration-700 lg:absolute lg:left-auto lg:right-0 lg:w-auto lg:block lg:translate-y-0"
+            [ngClass]="{
+                '-translate-y-full': !successfully && !hasError,
+                'translate-y-6': successfully || hasError,
+                'lg:translate-x-[calc(100%+2rem)]': !successfully && !hasError,
+                'lg:translate-x-0': successfully || hasError
+            }"
+        >
+            <app-message-form [text]="text" [iconName]="iconName" [styleProp]="propStyle"></app-message-form>
+        </div>
+    </div>
+
+    <div class="flex-1">
+        <app-form-new-appointment [customersList]="customersList" [servicesType]="servicesType" [resetForm]="resetForm" (formData)="handlerNewAppointment($event)"></app-form-new-appointment>
+    </div>
+</div>
