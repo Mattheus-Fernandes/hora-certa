@@ -12,7 +12,7 @@ export class AppointmentsComponent {
     {
       title: "Novo agendamento",
       description: "Agende um novo atendimento para sua cliente",
-      url: "",
+      url: "/menu/new-appointment",
       iconStyle: "bg-pink-100 text-pink-800",
       redirectStyle: "bg-pink-100 text-pink-800",
       iconName: "calendar-plus"
@@ -28,7 +28,7 @@ export class AppointmentsComponent {
     {
       title: "Lembrete 24h",
       description: "Veja as clientes que receberão o lembrete de confirmação",
-      url: "", 
+      url: "",
       iconStyle: "bg-yellow-100 text-yellow-800",
       redirectStyle: "bg-yellow-100 text-yellow-800",
       iconName: "bell-ring"
