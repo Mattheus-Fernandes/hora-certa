@@ -2,6 +2,8 @@
     class="py-2 px-4 flex items-center gap-2 shadow-md transition-all duration-500" 
     [ngClass]="styleButton(styleProp)"
     [type]="typeBtn"
+    [routerLink]="link"
+    routerLinkActive="!bg-blue-950 !text-white"
 >
     <lucide-icon [name]="iconName" [size]="15"></lucide-icon>
     <p>{{title}}</p>
