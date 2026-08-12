@@ -11,7 +11,6 @@ export class ButtonComponent {
   @Input() styleProp!: string
   @Input() typeBtn!: string
   @Input() link!: string
-  @Input() activeStyle = true
 
   styleButton(style: string) {
 
