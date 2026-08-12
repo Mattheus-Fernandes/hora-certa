@@ -10,13 +10,12 @@ export class ButtonComponent {
   @Input() title!: string
   @Input() styleProp!: string
   @Input() typeBtn!: string
+  @Input() link!: string
+  @Input() activeStyle = true
 
   styleButton(style: string) {
 
     switch(style) {
-
-      case "primary":
-        return ""
 
       case "save":
         return "bg-green-200 text-green-800"
@@ -25,7 +24,7 @@ export class ButtonComponent {
         return "bg-red-200 text-red-800"
 
       default:
-        return ""
+        return "bg-gray-50 text-blue-950"
     }
 
   }
