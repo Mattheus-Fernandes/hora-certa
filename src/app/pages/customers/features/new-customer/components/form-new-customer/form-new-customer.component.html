@@ -1,0 +1,33 @@
+<form class="h-auto w-full" [formGroup]="customerForm" (ngSubmit)="btnHandlerForm()">
+    <div class="w-full flex flex-col gap-6 lg:w-2/3">
+        <div class="w-full flex flex-col md:flex-row gap-6">
+            <div class="w-full">
+                <p class="mb-2 text-base text-blue-950">Nome*</p>
+                <input nz-input placeholder="Digite o nome" formControlName="name"/>
+            </div>
+            <div class="w-full">
+                <p for="date" class="mb-2 text-base text-blue-950">Sobrenome*</p>
+                <input nz-input placeholder="Digite o sobrenome" formControlName="lastname"/>
+
+            </div>
+        </div>
+        <div class="w-full flex flex-col md:flex-row gap-6">
+            <div class="w-full">
+                <p for="time" class="mb-2 text-base text-blue-950">E-mail*</p>
+                <input type="email" nz-input placeholder="Email" formControlName="email"/>
+            </div>
+            <div class="w-full">
+                <p for="service" class="mb-2 text-base text-blue-950">Celular*</p>
+                <input nz-input placeholder="(00) 00000-0000"  mask="(00) 00000-0000" formControlName="phone"/>
+            </div>
+        </div>
+        <div class="w-full">
+            <p for="observation" class="mb-2 text-base text-blue-950">Observação</p>
+            <textarea id="observation" rows="4" nz-input formControlName="observation" formControlName="observation"></textarea>
+        </div>
+        <div class="w-full flex justify-center gap-6 md:justify-end">
+            <app-button iconName="circle-x" title="Cancelar" routerLink="/menu/appointments" styleProp="cancel" typeBtn="button"></app-button>
+            <app-button *ngIf="formIsValid" iconName="save" title="Salvar" styleProp="save" typeBtn="submit"></app-button>
+        </div>
+    </div>
+</form>
