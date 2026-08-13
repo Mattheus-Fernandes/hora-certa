@@ -1,3 +1,3 @@
-import { ICustomer } from "../interfaces/customer.interface";
+import { ICustomer } from "../interfaces/customer/customer.interface";
 
 export type CustomersList = ICustomer[]
