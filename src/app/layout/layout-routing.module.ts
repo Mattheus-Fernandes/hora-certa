@@ -19,6 +19,9 @@ const routes: Routes = [
         path: "customers", loadChildren: () => import("../pages/customers/customers.module").then(m => m.CustomersModule)
       },
       {
+        path: "new-customer", loadChildren: () => import("../pages/customers/features/new-customer/new-customer.module").then(m => m.NewCustomerModule)
+      },
+      {
         path: "whatsapp", loadChildren: () => import("../pages/whatsapp/whatsapp.module").then(m => m.WhatsappModule)
       }
     ]

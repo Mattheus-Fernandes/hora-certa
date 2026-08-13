@@ -12,7 +12,7 @@ export class CustomersComponent {
     {
       title: "Cadastrar cliente",
       description: "Cadastre uma nova cliente para seus atendimentos",
-      url: "",
+      url: "/menu/new-customer",
       iconStyle: "bg-pink-100 text-pink-800",
       redirectStyle: "bg-pink-100 text-pink-800",
       iconName: "user-round-plus"
