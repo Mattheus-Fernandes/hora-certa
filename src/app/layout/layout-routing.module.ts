@@ -28,6 +28,9 @@ const routes: Routes = [
       {
         path: "confirmeds", loadChildren: () => import("../pages/appointments/features/confirmeds/confirmeds.module").then(m => m.ConfirmedsModule)
       },
+      {
+        path: "canceleds", loadChildren: () => import("../pages/appointments/features/canceleds/canceleds.module").then(m => m.CanceledsModule)
+      },
       //CUSTOMERS
       {
         path: "customers", loadChildren: () => import("../pages/customers/customers.module").then(m => m.CustomersModule)
