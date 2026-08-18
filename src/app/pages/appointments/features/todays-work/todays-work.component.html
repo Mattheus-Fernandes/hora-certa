@@ -1,0 +1,20 @@
+<div class="w-full flex flex-col gap-7 h-autolg:h-full">
+    <div class="flex flex-col gap-4 md:flex-row md:items-center md:justify-between bg-gray-100 p-5 shadow-md">
+        <div class="flex flex-col md:flex-row lg:items-center gap-4 relative">
+            <div class="p-4 h-fit w-fit shadow-md bg-purple-100 text-purple-800">
+                <lucide-icon name="calendar-check"></lucide-icon>
+            </div>
+
+            <div>
+                <h2 class="text-lg text-blue-950 font-semibold">Agenda do dia</h2>
+                <p class="text-sm text-blue-950">Confira os agendamentos programados para hoje</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="h-fit grid gap-7 grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
+        <ng-container *ngFor="let appointment of appointmentsList">
+            <app-card-appointment [data]="appointment"></app-card-appointment>
+        </ng-container>
+    </div>
+</div>

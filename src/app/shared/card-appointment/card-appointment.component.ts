@@ -8,6 +8,7 @@ import { IAppointmentRes } from 'src/app/core/interfaces/apppointment-res.interf
 })
 export class CardAppointmentComponent {
   @Input() data!: IAppointmentRes
+  @Input() showStatus: boolean = false
 
   colorStatus() {
      switch (this.data.status) {
