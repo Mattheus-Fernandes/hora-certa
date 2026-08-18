@@ -16,6 +16,9 @@ export class ButtonComponent {
 
     switch(style) {
 
+      case "primary":
+        return "bg-blue-950 text-white"
+
       case "save":
         return "bg-green-200 text-green-800"
 
@@ -23,7 +26,7 @@ export class ButtonComponent {
         return "bg-red-200 text-red-800"
 
       default:
-        return "bg-gray-50 text-blue-950"
+        return "bg-gray-100 text-blue-950"
     }
 
   }
