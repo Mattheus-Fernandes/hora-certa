@@ -20,7 +20,7 @@ export class AppointmentsComponent {
     {
       title: "Agenda do dia",
       description: "Confira os agendamentos programados para hoje",
-      url: "",
+      url: "/menu/today-work",
       iconStyle: "bg-purple-100 text-purple-800",
       redirectStyle: "bg-purple-100 text-purple-800",
       iconName: "calendar-check"
