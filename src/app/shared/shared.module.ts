@@ -9,6 +9,9 @@ import { CardNavegationComponent } from './card-navegation/card-navegation.compo
 import { NgZorroModule } from '../core/ng-zorro/ng-zorro.module';
 import { ButtonComponent } from './button/button.component';
 import { MessageFormComponent } from './message-form/message-form.component';
+import { CardAppointmentComponent } from './card-appointment/card-appointment.component';
+import { StatusAppointmentPipe } from '../core/pipes/status-appointment.pipe';
+import { PhonePipe } from '../core/pipes/phone.pipe';
 
 
 
@@ -19,7 +22,10 @@ import { MessageFormComponent } from './message-form/message-form.component';
     IdentificationPageComponent,
     CardNavegationComponent,
     ButtonComponent,
-    MessageFormComponent
+    MessageFormComponent,
+    CardAppointmentComponent,
+    StatusAppointmentPipe,
+    PhonePipe
   ],
   imports: [
     CommonModule,
@@ -34,7 +40,8 @@ import { MessageFormComponent } from './message-form/message-form.component';
     HeaderComponent,
     CardNavegationComponent,
     ButtonComponent,
-    MessageFormComponent
+    MessageFormComponent,
+    CardAppointmentComponent
   ]
 })
 export class SharedModule { }
