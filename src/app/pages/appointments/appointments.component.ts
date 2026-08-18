@@ -52,7 +52,7 @@ export class AppointmentsComponent {
     {
       title: "Cancelados",
       description: "Confira os atendimentos que foram cancelados",
-      url: "",
+      url: "/menu/canceleds",
       iconStyle: "bg-red-100 text-red-800",
       redirectStyle: "bg-red-100 text-red-800",
       iconName: "circle-x"
