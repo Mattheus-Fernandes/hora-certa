@@ -16,6 +16,9 @@ const routes: Routes = [
         path: "new-appointment", loadChildren: () => import("../pages/appointments/features/new-appointment/new-appointment.module").then(m => m.NewAppointmentModule)
       },
       {
+        path: "my-appointments", loadChildren: () => import("../pages/appointments/features/my-appointments/my-appointments.module").then(m => m.MyAppointmentsModule)
+      },
+      {
         path: "customers", loadChildren: () => import("../pages/customers/customers.module").then(m => m.CustomersModule)
       },
       {
