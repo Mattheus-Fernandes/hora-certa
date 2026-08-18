@@ -45,7 +45,7 @@ export class AppointmentsComponent {
     {
       title: "Confirmados",
       description: "Visualize as clientes que confirmaram o atendimento",
-      url: "", iconStyle: "bg-green-100 text-green-800",
+      url: "/menu/confirmeds", iconStyle: "bg-green-100 text-green-800",
       redirectStyle: "bg-green-100 text-green-800",
       iconName: "circle-check"
     },

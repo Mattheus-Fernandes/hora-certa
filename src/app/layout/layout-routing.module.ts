@@ -25,6 +25,9 @@ const routes: Routes = [
       {
         path: "reminds", loadChildren: () => import("../pages/appointments/features/reminds/reminds.module").then(m => m.RemindsModule)
       },
+      {
+        path: "confirmeds", loadChildren: () => import("../pages/appointments/features/confirmeds/confirmeds.module").then(m => m.ConfirmedsModule)
+      },
       //CUSTOMERS
       {
         path: "customers", loadChildren: () => import("../pages/customers/customers.module").then(m => m.CustomersModule)
