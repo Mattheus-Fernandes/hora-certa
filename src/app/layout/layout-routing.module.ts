@@ -9,6 +9,7 @@ const routes: Routes = [
   {
     path: '',
     component: LayoutComponent, children: [
+      // APPOINTMENTS
       {
         path: "appointments", loadChildren: () => import("../pages/appointments/appointments.module").then(m => m.AppointmentsModule)
       },
@@ -19,11 +20,16 @@ const routes: Routes = [
         path: "my-appointments", loadChildren: () => import("../pages/appointments/features/my-appointments/my-appointments.module").then(m => m.MyAppointmentsModule)
       },
       {
+        path: "today-work", loadChildren: () => import("../pages/appointments/features/todays-work/todays-work.module").then(m => m.TodaysWorkModule)
+      },
+      {
         path: "customers", loadChildren: () => import("../pages/customers/customers.module").then(m => m.CustomersModule)
       },
+      //CUSTOMERS
       {
         path: "new-customer", loadChildren: () => import("../pages/customers/features/new-customer/new-customer.module").then(m => m.NewCustomerModule)
       },
+      //WHATSAPP
       {
         path: "whatsapp", loadChildren: () => import("../pages/whatsapp/whatsapp.module").then(m => m.WhatsappModule)
       }
