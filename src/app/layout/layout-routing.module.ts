@@ -23,9 +23,12 @@ const routes: Routes = [
         path: "today-work", loadChildren: () => import("../pages/appointments/features/todays-work/todays-work.module").then(m => m.TodaysWorkModule)
       },
       {
-        path: "customers", loadChildren: () => import("../pages/customers/customers.module").then(m => m.CustomersModule)
+        path: "reminds", loadChildren: () => import("../pages/appointments/features/reminds/reminds.module").then(m => m.RemindsModule)
       },
       //CUSTOMERS
+      {
+        path: "customers", loadChildren: () => import("../pages/customers/customers.module").then(m => m.CustomersModule)
+      },
       {
         path: "new-customer", loadChildren: () => import("../pages/customers/features/new-customer/new-customer.module").then(m => m.NewCustomerModule)
       },

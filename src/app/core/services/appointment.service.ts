@@ -64,4 +64,8 @@ export class AppointmentService {
     return this._http.get<AppointmentsList>(`${this._url}/today`)
   }
 
+  getAllAppointmentsReminds(): Observable<AppointmentsList> {
+    return this._http.get<AppointmentsList>(`${this._url}/reminds`)
+  }
+
 }

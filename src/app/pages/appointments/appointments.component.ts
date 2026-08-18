@@ -28,7 +28,7 @@ export class AppointmentsComponent {
     {
       title: "Lembrete 24h",
       description: "Veja as clientes que receberão o lembrete de confirmação",
-      url: "",
+      url: "/menu/reminds",
       iconStyle: "bg-yellow-100 text-yellow-800",
       redirectStyle: "bg-yellow-100 text-yellow-800",
       iconName: "bell-ring"
