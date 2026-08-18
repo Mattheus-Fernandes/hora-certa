@@ -36,7 +36,7 @@ export class AppointmentsComponent {
     {
       title: "Meus agendamentos",
       description: "Busque todos os agendamentos salvos",
-      url: "",
+      url: "/menu/my-appointments",
       iconStyle: "bg-orange-100 text-orange-700",
       redirectStyle: "bg-orange-100 text-orange-700",
       iconName: "book-search"
