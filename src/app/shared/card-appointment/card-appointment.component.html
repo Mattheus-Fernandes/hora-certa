@@ -11,7 +11,7 @@
                     <p>{{data.customer.phone | phone}}</p>
                 </div>
             </div>
-            <div class="h-fit w-full p-2 text-center md:text-start md:w-fit" [ngClass]="colorStatus()">
+            <div *ngIf="showStatus" class="h-fit w-full p-2 text-center md:text-start md:w-fit" [ngClass]="colorStatus()">
                 <p>{{data.status | statusAppointment}}</p>
             </div>
         </div>
