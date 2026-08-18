@@ -60,7 +60,7 @@ export class AppointmentsComponent {
     {
       title: "Finalizados",
       description: "Visualize os atendimentos que já foram realizados",
-      url: "",
+      url: "/menu/completeds",
       iconStyle: "bg-blue-100 text-blue-800",
       redirectStyle: "bg-blue-100 text-blue-800",
       iconName: "flag"
