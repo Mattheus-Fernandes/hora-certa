@@ -38,6 +38,10 @@ import {
   UserRoundPlus,
   CodeXml,
   Save,
+  Timer,
+  User,
+  BriefcaseBusiness,
+  Search
 } from 'lucide-angular';
 
 
@@ -83,7 +87,10 @@ import {
       UserRoundPlus,
       CodeXml,
       Save,
-
+      Timer,
+      User,
+      BriefcaseBusiness,
+      Search
     })
   ],
   exports:[
