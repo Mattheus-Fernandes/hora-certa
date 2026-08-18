@@ -77,4 +77,13 @@ export class AppointmentService {
     })
   }
 
+  getAllAppointmentsCanceleds(month: string, year: string): Observable<AppointmentsList> {
+    return this._http.get<AppointmentsList>(`${this._url}/canceled`, {
+      params: {
+        month,
+        year
+      }
+    })
+  }
+
 }
