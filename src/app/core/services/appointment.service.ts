@@ -60,4 +60,8 @@ export class AppointmentService {
     return `${correctMonth}/${year}`
   }
 
+  getAllAppointmentsToday(): Observable<AppointmentsList> {
+    return this._http.get<AppointmentsList>(`${this._url}/today`)
+  }
+
 }
