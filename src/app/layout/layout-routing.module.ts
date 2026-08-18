@@ -31,6 +31,9 @@ const routes: Routes = [
       {
         path: "canceleds", loadChildren: () => import("../pages/appointments/features/canceleds/canceleds.module").then(m => m.CanceledsModule)
       },
+      {
+        path: "completeds", loadChildren: () => import("../pages/appointments/features/completeds/completeds.module").then(m => m.CompletedsModule)
+      },
       //CUSTOMERS
       {
         path: "customers", loadChildren: () => import("../pages/customers/customers.module").then(m => m.CustomersModule)

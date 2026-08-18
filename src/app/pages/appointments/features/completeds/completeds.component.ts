@@ -5,11 +5,11 @@ import { AppointmentService } from 'src/app/core/services/appointment.service';
 import { AppointmentsList } from 'src/app/core/types/appointments-list.type';
 
 @Component({
-  selector: 'app-canceleds',
-  templateUrl: './canceleds.component.html',
-  styleUrls: ['./canceleds.component.scss']
+  selector: 'app-completeds',
+  templateUrl: './completeds.component.html',
+  styleUrls: ['./completeds.component.scss']
 })
-export class CanceledsComponent implements OnInit {
+export class CompletedsComponent implements OnInit {
 
   private readonly _appointmentsService = inject(AppointmentService)
 
@@ -27,7 +27,7 @@ export class CanceledsComponent implements OnInit {
     const month = new Date().getMonth() + 1
     const year = new Date().getFullYear()
 
-    this._appointmentsService.getAllAppointmentsCanceleds(month.toString(), year.toString())
+    this._appointmentsService.getAllAppointmentsCompleteds(month.toString(), year.toString())
       .pipe(
         take(1)
       )
@@ -48,7 +48,7 @@ export class CanceledsComponent implements OnInit {
     const correctMonth = month < 10 ? `0${month}` : month.toString()
     const year = this.appointmentDate.value?.getFullYear().toString() as string
 
-    this._appointmentsService.getAllAppointmentsCanceleds(correctMonth, year)
+    this._appointmentsService.getAllAppointmentsCompleteds(correctMonth, year)
       .pipe(
         take(1)
       )
@@ -56,5 +56,4 @@ export class CanceledsComponent implements OnInit {
         this.appointmentsListFiltered = res
       })
   }
-
 }
