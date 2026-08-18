@@ -1,0 +1,28 @@
+<div class="w-full flex flex-col gap-7 h-autolg:h-full">
+    <div class="flex flex-col gap-4 md:flex-row md:items-center md:justify-between bg-gray-100 p-5 shadow-md">
+        <div class="flex flex-col md:flex-row lg:items-center gap-4 relative">
+            <div class="p-4 h-fit w-fit shadow-md bg-orange-100 text-orange-700">
+                <lucide-icon name="book-search"></lucide-icon>
+            </div>
+
+            <div>
+                <h2 class="text-lg text-blue-950 font-semibold">Meus agendamentos</h2>
+                <p class="text-sm text-blue-950">Visualize todos os seus agendamentos</p>
+            </div>
+        </div>
+        <div class="flex flex-col items-center gap-4 md:flex-row">
+            <input nz-input placeholder="Pesquisar" [formControl]="searchBar" [nzStatus]="nzStatus" />
+            <nz-date-picker id="date" class="w-full" nzMode="month" nzFormat="MM/yyyy" nzPlaceHolder="Filtre pelo mês" [formControl]="appointmentDate" [nzStatus]="nzStatus"></nz-date-picker>
+            <div class="hidden md:block bg-blue-950 text-white p-2 lg:cursor-pointer" (click)="btnFilter()">
+                <lucide-icon name="search" [size]="15" ></lucide-icon>
+            </div>
+            <app-button class="self-end md:hidden" iconName="search" title="Pesquisar" styleProp="primary" (click)="btnFilter()"></app-button>
+        </div>
+    </div>
+
+    <div class="h-fit grid gap-7 grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
+        <ng-container *ngFor="let appointment of appointmentsList">
+            <app-card-appointment [data]="appointment"></app-card-appointment>
+        </ng-container>
+    </div>
+</div>
