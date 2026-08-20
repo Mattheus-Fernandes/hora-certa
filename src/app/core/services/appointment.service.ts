@@ -68,28 +68,30 @@ export class AppointmentService {
     return this._http.get<AppointmentsList>(`${this._url}/reminds`)
   }
 
-  getAllAppointmentsConfirmeds(date: string): Observable<AppointmentsList> {
-    return this._http.get<AppointmentsList>(`${this._url}/confirmed`, {
-      params: {
-        date
-      }
-    })
-  }
+  getAllAppointmentsByStatus(status: string, date: string): Observable<AppointmentsList> {
 
-  getAllAppointmentsCanceleds(date: string): Observable<AppointmentsList> {
-    return this._http.get<AppointmentsList>(`${this._url}/canceled`, {
-      params: {
-        date
-      }
-    })
-  }
+    switch (status) {
+      case "CONFIRMED":
+        return this._http.get<AppointmentsList>(`${this._url}/confirmed`, {
+          params: {
+            date
+          }
+        })
+      case "CANCELED":
+        return this._http.get<AppointmentsList>(`${this._url}/canceled`, {
+          params: {
+            date
+          }
+        })
+      case "COMPLETED":
+        return this._http.get<AppointmentsList>(`${this._url}/completed`, {
+          params: {
+            date
+          }
+        })
+      default:
+        throw new Error(`Status de agendamento inválido: ${status}`);
+    }
 
-  getAllAppointmentsCompleteds(date: string): Observable<AppointmentsList> {
-    return this._http.get<AppointmentsList>(`${this._url}/completed`, {
-      params: {
-        date
-      }
-    })
   }
-
 }

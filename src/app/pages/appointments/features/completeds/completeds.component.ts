@@ -1,6 +1,7 @@
 import { Component, inject, OnInit } from '@angular/core';
 import { FormControl } from '@angular/forms';
 import { take } from 'rxjs';
+import { AppointmentStatusEnum } from 'src/app/core/enums/appointments-status.enum';
 import { AppointmentService } from 'src/app/core/services/appointment.service';
 import { AppointmentsList } from 'src/app/core/types/appointments-list.type';
 import { TransformDate } from 'src/app/core/utils/transform-date';
@@ -24,7 +25,7 @@ export class CompletedsComponent implements OnInit {
   }
 
   private getAllAppointmentsCompleted() {
-    this._appointmentsService.getAllAppointmentsCompleteds(this.getMonthAndYear())
+    this._appointmentsService.getAllAppointmentsByStatus(AppointmentStatusEnum.COMPLETED, this.getMonthAndYear())
       .pipe(
         take(1)
       )
@@ -42,7 +43,7 @@ export class CompletedsComponent implements OnInit {
       return
     }
 
-    this._appointmentsService.getAllAppointmentsCompleteds(this.getMonthAndYear())
+    this._appointmentsService.getAllAppointmentsByStatus(AppointmentStatusEnum.COMPLETED, this.getMonthAndYear())
       .pipe(
         take(1)
       )
