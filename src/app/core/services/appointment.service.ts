@@ -68,11 +68,10 @@ export class AppointmentService {
     return this._http.get<AppointmentsList>(`${this._url}/reminds`)
   }
 
-  getAllAppointmentsConfirmeds(month: string, year: string): Observable<AppointmentsList> {
+  getAllAppointmentsConfirmeds(date: string): Observable<AppointmentsList> {
     return this._http.get<AppointmentsList>(`${this._url}/confirmed`, {
       params: {
-        month,
-        year
+        date
       }
     })
   }
