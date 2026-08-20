@@ -3,6 +3,7 @@ import { FormControl } from '@angular/forms';
 import { take } from 'rxjs';
 import { AppointmentService } from 'src/app/core/services/appointment.service';
 import { AppointmentsList } from 'src/app/core/types/appointments-list.type';
+import { TransformDate } from 'src/app/core/utils/transform-date';
 
 @Component({
   selector: 'app-canceleds',
@@ -19,15 +20,11 @@ export class CanceledsComponent implements OnInit {
   nzStatus: '' | 'error' = ''
 
   ngOnInit() {
-    this.getAllAppointmentsReminds()
+    this.getAllAppointmentsCanceleds()
   }
 
-  private getAllAppointmentsReminds() {
-
-    const month = new Date().getMonth() + 1
-    const year = new Date().getFullYear()
-
-    this._appointmentsService.getAllAppointmentsCanceleds(month.toString(), year.toString())
+  private getAllAppointmentsCanceleds() {
+    this._appointmentsService.getAllAppointmentsCanceleds(this.getMonthAndYear())
       .pipe(
         take(1)
       )
@@ -44,17 +41,20 @@ export class CanceledsComponent implements OnInit {
       return
     }
 
-    const month = Number(this.appointmentDate.value?.getMonth()) + 1
-    const correctMonth = month < 10 ? `0${month}` : month.toString()
-    const year = this.appointmentDate.value?.getFullYear().toString() as string
-
-    this._appointmentsService.getAllAppointmentsCanceleds(correctMonth, year)
+    this._appointmentsService.getAllAppointmentsCanceleds(this.getMonthAndYear())
       .pipe(
         take(1)
       )
       .subscribe((res: AppointmentsList) => {
         this.appointmentsListFiltered = res
       })
+  }
+
+  private getMonthAndYear(): string {
+    const month = Number(this.appointmentDate.value?.getMonth()) + 1
+    const year = this.appointmentDate.value?.getFullYear()
+
+    return TransformDate.apiFormat(String(month), String(year))
   }
 
 }
