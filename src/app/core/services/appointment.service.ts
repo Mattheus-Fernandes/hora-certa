@@ -40,10 +40,12 @@ export class AppointmentService {
     )
   }
 
-  getAppointmentsByName(name: string): Observable<any> {
-    return of(
-      console.log(`Buscar somente pelo o nome\n${name}`)
-    )
+  getAppointmentsByName(name: string): Observable<AppointmentsList> {
+     return this._http.get<AppointmentsList>(`${this._url}/name`, {
+      params: {
+        name
+      }
+    })
   }
 
   getAppointmentsByMonthAndYear(date: string): Observable<AppointmentsList> {
