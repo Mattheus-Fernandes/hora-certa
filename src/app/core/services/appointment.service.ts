@@ -46,10 +46,12 @@ export class AppointmentService {
     )
   }
 
-  getAppointmentsByMonthAndYear(date: Date): Observable<any> {
-    return of(
-      console.log(`Buscar somente pelo o mês\n${this.transformDate(date)}`)
-    )
+  getAppointmentsByMonthAndYear(date: string): Observable<AppointmentsList> {
+    return this._http.get<AppointmentsList>(`${this._url}/month`, {
+      params: {
+        date
+      }
+    })
   }
 
   private transformDate(date: Date): string {
