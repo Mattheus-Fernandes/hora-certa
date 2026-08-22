@@ -121,7 +121,7 @@ export class MyAppointmentsComponent implements OnInit {
       .pipe(
         take(1)
       )
-      .subscribe()
+      .subscribe((res: AppointmentsList) => this.appointmenstListFiltered = res)
   }
 
   private filterOnlyMonthAndYear(date: string) {
