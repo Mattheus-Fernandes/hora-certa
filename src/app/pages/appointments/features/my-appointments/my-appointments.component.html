@@ -21,7 +21,7 @@
     </div>
 
     <div class="h-fit grid gap-7 grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
-        <ng-container *ngFor="let appointment of appointmentsList">
+        <ng-container *ngFor="let appointment of appointmenstListFiltered">
             <app-card-appointment [data]="appointment" [showStatus]="true"></app-card-appointment>
         </ng-container>
     </div>
