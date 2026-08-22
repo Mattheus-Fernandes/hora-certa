@@ -6,6 +6,7 @@ import { IFilterNameDate } from 'src/app/core/interfaces/filter-name-date.interf
 import { IFilterFullname } from 'src/app/core/interfaces/filter-fullaname.interface';
 import { AppointmentService } from 'src/app/core/services/appointment.service';
 import { AppointmentsList } from 'src/app/core/types/appointments-list.type';
+import { TransformDate } from 'src/app/core/utils/transform-date';
 
 
 @Component({
@@ -18,6 +19,7 @@ export class MyAppointmentsComponent implements OnInit {
   private readonly _appointmentsService = inject(AppointmentService)
 
   appointmentsList: AppointmentsList = []
+  appointmenstListFiltered: AppointmentsList = []
 
   appointmentDate = new FormControl<Date | null>(null)
   searchBar = new FormControl<string | null>("")
@@ -30,7 +32,10 @@ export class MyAppointmentsComponent implements OnInit {
   getAllAppointments() {
     this._appointmentsService.getAllAppointments()
       .pipe(take(1))
-      .subscribe((res: AppointmentsList) => this.appointmentsList = res)
+      .subscribe((res: AppointmentsList) => {
+        this.appointmentsList = res
+        this.appointmenstListFiltered = this.appointmentsList
+      })
   }
 
   btnFilter() {
@@ -83,7 +88,7 @@ export class MyAppointmentsComponent implements OnInit {
     }
 
     if (ONLY_DATE) {
-      this.filterOnlyMonthAndYear(date)
+      this.filterOnlyMonthAndYear(this.getMonthAndYear())
     }
   }
 
@@ -119,13 +124,18 @@ export class MyAppointmentsComponent implements OnInit {
       .subscribe()
   }
 
-  private filterOnlyMonthAndYear(date: Date) {
+  private filterOnlyMonthAndYear(date: string) {
     this._appointmentsService.getAppointmentsByMonthAndYear(date)
       .pipe(
         take(1)
       )
-      .subscribe()
+      .subscribe((res: AppointmentsList) => this.appointmenstListFiltered = res)
   }
 
+  private getMonthAndYear(): string {
+    const month = Number(this.appointmentDate.value?.getMonth()) + 1
+    const year = this.appointmentDate.value?.getFullYear()
 
+    return TransformDate.apiFormat(String(month), String(year))
+  }
 }
